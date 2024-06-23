@@ -56,7 +56,7 @@ function openLink(input) {
       if (locationType(target) === types.DIR) {
         return `not a link: ${path[path.length - 1]}`;
       }
-      window.open(target, "_self");
+      window.location.href = target;
       return;
     } catch (err) {
       return err;
@@ -185,7 +185,7 @@ function search(input) {
   }
   if (command && command[0]) {
     const searchString = command[0];
-    window.open(currentSearchUrl + searchString, "_self");
+    window.location.href = currentSearchUrl + searchString;
     return;
   }
   return COMMANDS.search.help;
