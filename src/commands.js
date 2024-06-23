@@ -185,7 +185,7 @@ function search(input) {
   }
   if (command && command[0]) {
     const searchString = command[0];
-    window.open(currentSearchUrl + searchString, "_blank");
+    window.open(currentSearchUrl + searchString, "_self");
     return;
   }
   return COMMANDS.search.help;
